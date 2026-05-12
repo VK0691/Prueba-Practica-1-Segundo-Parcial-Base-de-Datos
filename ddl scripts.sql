@@ -39,9 +39,9 @@ CREATE TABLE CONSULTA (
     CONSTRAINT fk_consulta_paciente FOREIGN KEY (id_paciente)
         REFERENCES PACIENTE(id_paciente) ON DELETE CASCADE,
     CONSTRAINT fk_consulta_medico FOREIGN KEY (id_medico)
-        REFERENCES MEDICO(id_medico) ON DELETE CASCADE,
-    CONSTRAINT chk_consulta_fecha CHECK (fecha_consulta <= SYSDATE)
+        REFERENCES MEDICO(id_medico) ON DELETE CASCADE
 );
+
 
 -- 5. TABLA RECETA
 CREATE TABLE RECETA (
